@@ -1,0 +1,90 @@
+print("Welcome to our Grocery :)")
+
+bananaPrice = 1.90
+
+applePrice = 1.15
+
+pearPrice = 1.40
+
+def askBananaAmount():
+
+    BananaAmount = float(input("Please enter the amount of banana you will buy:"))
+
+    if 0 < BananaAmount <= 10:
+        print("you bought", BananaAmount, "kg of bananas.")
+
+    elif BananaAmount > 10:
+        print("You can't buy more than 10 kg of bananas.")
+
+        askBananaAmount()
+
+    elif BananaAmount == 0:
+        print("You didn't buy any banana.")
+
+        askBananaAmount()
+
+    else:
+        print("The number you entered must be positive.")
+
+        askBananaAmount()
+
+    return BananaAmount
+
+BananaAmount = askBananaAmount()
+
+def askAppleAmount():
+
+    appleAmount = float(input("Please enter the amount of apple you will buy:"))
+
+    if 0 < appleAmount < 10:
+        print("you bought", appleAmount, "kg of apples.")
+
+    elif appleAmount > 10:
+        print("You can't buy more than 10 kg of apples.")
+
+        askAppleAmount()
+
+    elif appleAmount == 0:
+        print("You didn't buy any apple.")
+
+        askAppleAmount()
+
+    else:
+        print("The number you entered must be positive.")
+
+        askAppleAmount()
+
+    return appleAmount
+
+appleAmount = askAppleAmount()
+
+def askPearAmount():
+
+    pearAmount = float(input("Please enter the amount of pear you will buy:"))
+
+    if 0 < pearAmount < 10:
+        print("you bought", pearAmount, "kg of pears.")
+
+    elif pearAmount > 10:
+        print("You can't buy more than 10 kg of pears.")
+
+        askPearAmount()
+
+    elif pearAmount == 0:
+        print("You didn't buy any pear.")
+
+        askPearAmount()
+
+    else:
+        print("The number you entered must be positive.")
+
+        askPearAmount()
+
+    return pearAmount
+
+pearAmount = askPearAmount()
+
+totalPayment = (bananaPrice*BananaAmount) + (applePrice*appleAmount) + (pearPrice*pearAmount)
+
+print("The amount you will pay is", totalPayment, "dollars." )
+print("Thank you for choosing our grocery.")
